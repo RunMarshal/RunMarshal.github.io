@@ -1,9 +1,577 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RunMarshal 的个人主页，展示项目、参与贡献和联系方式。">
     <title>RunMarshal Space</title>
+    <style>
+        :root {
+            --bg: #f4f1eb;
+            --bg-2: #eef4ef;
+            --card: rgba(255, 255, 255, 0.78);
+            --card-border: rgba(20, 33, 61, 0.09);
+            --text: #10223e;
+            --muted: #5c6678;
+            --accent: #1d6f5a;
+            --accent-2: #174ea6;
+            --shadow: 0 18px 50px rgba(16, 34, 62, 0.11);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(29, 111, 90, 0.12), transparent 30%),
+                radial-gradient(circle at top right, rgba(23, 78, 166, 0.10), transparent 30%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: min(1140px, calc(100% - 28px));
+            margin: 0 auto;
+            padding: 24px 0 56px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 0 24px;
+        }
+
+        .brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72));
+            border: 1px solid var(--card-border);
+            border-radius: 26px;
+            padding: 34px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(14px);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(31, 122, 95, 0.1);
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            margin: 16px 0 12px;
+            font-size: clamp(2.2rem, 4.6vw, 3.9rem);
+            line-height: 1.04;
+            letter-spacing: -0.04em;
+        }
+
+        .subtitle {
+            max-width: 760px;
+            margin: 0;
+            font-size: 1.04rem;
+            line-height: 1.85;
+            color: var(--muted);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 18px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button.primary {
+            background: var(--text);
+            color: white;
+            box-shadow: 0 14px 28px rgba(20, 33, 61, 0.18);
+        }
+
+        .button.secondary {
+            background: rgba(255, 255, 255, 0.72);
+            border-color: rgba(20, 33, 61, 0.12);
+            color: var(--text);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(14px);
+        }
+
+        .panel {
+            padding: 24px;
+        }
+
+        .span-3 {
+            grid-column: span 3;
+        }
+
+        .span-5 {
+            grid-column: span 5;
+        }
+
+        .span-8 {
+            grid-column: span 8;
+        }
+
+        .span-12 {
+            grid-column: span 12;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.15rem;
+        }
+
+        .text {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .stat-list,
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .stat-list li {
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(20, 33, 61, 0.08);
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 1rem;
+            font-weight: 650;
+        }
+
+        .project-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .project {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(20, 33, 61, 0.08);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            border-color: rgba(31, 122, 95, 0.28);
+        }
+
+        .project h3 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+        }
+
+        .project p {
+            margin: 0 0 12px;
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(31, 122, 95, 0.1);
+            color: var(--accent);
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-2);
+            font-weight: 600;
+        }
+
+        .profile {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 24px;
+            background:
+                linear-gradient(145deg, rgba(29, 111, 90, 0.18), rgba(23, 78, 166, 0.14)),
+                linear-gradient(180deg, #fff, #edf2f7);
+            border: 1px solid rgba(20, 33, 61, 0.08);
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.06em;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .meta span {
+            padding-right: 14px;
+            border-right: 1px solid rgba(20, 33, 61, 0.12);
+        }
+
+        .meta span:last-child {
+            border-right: 0;
+            padding-right: 0;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .news-list li {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            gap: 12px;
+            align-items: start;
+            padding: 13px 14px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.66);
+            border: 1px solid rgba(20, 33, 61, 0.08);
+        }
+
+        .date {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .news-text {
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        .footer {
+            padding: 24px 0 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 860px) {
+            .profile {
+                grid-template-columns: 1fr;
+            }
+
+            .avatar {
+                width: 112px;
+                height: 112px;
+                border-radius: 20px;
+            }
+
+            .span-4,
+            .span-8,
+            .span-12 {
+                grid-column: span 12;
+            }
+
+            .span-3,
+            .span-5 {
+                grid-column: span 12;
+            }
+
+            .project-list {
+                grid-template-columns: 1fr;
+            }
+
+            .news-list li {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .hero {
+                padding: 24px;
+            }
+
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to RunMarshal's Personal Site!</h1>
+    <div class="wrap">
+        <header class="nav">
+            <div class="brand">RunMarshal Space</div>
+            <nav class="nav-links" aria-label="页面导航">
+                <a href="#about">关于我</a>
+                <a href="#projects">项目</a>
+                <a href="#contact">联系</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="profile">
+                <div class="avatar">R</div>
+                <div>
+                    <div class="eyebrow">RunMarshal · Personal Homepage</div>
+                    <h1>RunMarshal</h1>
+                    <p class="subtitle">
+                        这是我的个人主页。这里会放我的简介、最近动态、参与过的开源项目，以及能快速找到我的链接。
+                        我想把它做成一个长期更新的首页，而不是一份静态简历。
+                    </p>
+                    <div class="meta">
+                        <span>Open Source</span>
+                        <span>AI / Memory / Systems</span>
+                        <span>GitHub Contributor</span>
+                    </div>
+                    <div class="actions">
+                        <a class="button primary" href="#projects">Projects</a>
+                        <a class="button secondary" href="#links">Links</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="grid" id="about">
+            <section class="card panel span-8">
+                <div class="section-title">
+                    <h2>About</h2>
+                    <p>简洁介绍 + 你最想被别人看见的部分</p>
+                </div>
+                <p class="text">
+                    我目前会把主页重点放在“我是谁、我做过什么、我正在关注什么”这三件事上。
+                    这类结构和你给的参考站一样，更适合持续追加论文、项目、博客和开源贡献。
+                </p>
+                <p class="text" style="margin-top: 14px;">
+                    如果你愿意，我还可以继续帮你加一版更像学术主页的内容组织方式，
+                    比如把项目改成 `Selected Projects`，把参与记录改成 `News`，整体会更接近你给的那个站。
+                </p>
+            </section>
+
+            <aside class="card panel span-4">
+                <div class="section-title">
+                    <h2>Quick Info</h2>
+                    <p>一句话信息</p>
+                </div>
+                <ul class="stat-list">
+                    <li>
+                        <span class="stat-label">主页定位</span>
+                        <span class="stat-value">个人主页 / 作品集 / 链接页</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">风格方向</span>
+                        <span class="stat-value">克制、学术、可持续更新</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">核心内容</span>
+                        <span class="stat-value">项目、贡献、联系入口</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="card panel span-12" id="news">
+                <div class="section-title">
+                    <h2>News</h2>
+                    <p>可以持续更新</p>
+                </div>
+                <ul class="news-list">
+                    <li>
+                        <div class="date">2026</div>
+                        <div class="news-text">把主页重构为更完整的个人站，增加了项目展示和开源链接入口。</div>
+                    </li>
+                    <li>
+                        <div class="date">Recent</div>
+                        <div class="news-text">开始整理参与过的 GitHub 项目，把贡献记录放到主页中统一展示。</div>
+                    </li>
+                    <li>
+                        <div class="date">Now</div>
+                        <div class="news-text">后续可以继续补充：博客、研究方向、简历、联系邮箱和社交账号。</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card panel span-12" id="projects">
+                <div class="section-title">
+                    <h2>Selected Projects</h2>
+                    <p>你参与过的 GitHub 项目</p>
+                </div>
+                <div class="project-list">
+                    <article class="project">
+                        <div class="tag-row">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">AI Memory</span>
+                        </div>
+                        <h3>Awesome-AI-Memory</h3>
+                        <p>
+                            我参与过的一个开源项目。这里适合写成“我在这个项目里做了什么”，例如整理资料、补充文档、实现功能或参与协作。
+                        </p>
+                        <a class="link" href="https://github.com/IAAR-Shanghai/Awesome-AI-Memory" target="_blank" rel="noreferrer">
+                            GitHub Repository →
+                        </a>
+                    </article>
+
+                    <article class="project">
+                        <div class="tag-row">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">DeepMemo</span>
+                        </div>
+                        <h3>deepmemo</h3>
+                        <p>
+                            另一个参与项目。你也可以在这里附上一句更明确的贡献说明，让访问者快速理解你的角色和产出。
+                        </p>
+                        <a class="link" href="https://github.com/YeyezhizzZ/deepmemo" target="_blank" rel="noreferrer">
+                            GitHub Repository →
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card panel span-5" id="links">
+                <div class="section-title">
+                    <h2>Links</h2>
+                    <p>常用入口</p>
+                </div>
+                <ul class="stat-list">
+                    <li>
+                        <span class="stat-label">GitHub</span>
+                        <span class="stat-value">建议换成你的个人主页链接</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">Email</span>
+                        <span class="stat-value">your-email@example.com</span>
+                    </li>
+                    <li>
+                        <span class="stat-label">Blog / CV</span>
+                        <span class="stat-value">可以继续补充</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card panel span-7" id="contact">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>保持入口清晰</p>
+                </div>
+                <p class="text">
+                    如果你希望这个主页更像参考站，我建议下一步把联系方式做成顶部一排按钮，
+                    然后增加一个更正式的头像和一段英文简介。这样会更接近你给的那个框架。
+                </p>
+                <div class="actions" style="margin-top: 18px;">
+                    <a class="button primary" href="mailto:your-email@example.com">Email</a>
+                    <a class="button secondary" href="https://github.com/IAAR-Shanghai/Awesome-AI-Memory" target="_blank" rel="noreferrer">Awesome-AI-Memory</a>
+                    <a class="button secondary" href="https://github.com/YeyezhizzZ/deepmemo" target="_blank" rel="noreferrer">deepmemo</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            RunMarshal · Personal homepage
+        </footer>
+    </div>
 </body>
 </html>
