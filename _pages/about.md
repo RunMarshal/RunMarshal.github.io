@@ -17,25 +17,22 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Yijun Shen (沈逸骏) is a first-year master's student in Computer Science at [East China Normal University (ECNU)](https://www.ecnu.edu.cn/), where he is fortunate to be advised by [Prof. Kai Zhang](https://faculty.ecnu.edu.cn/_s16/zk2/main.psp). Prior to ECNU, he completed his B.Eng. degree at Hohai University in 2025, under the supervision of [Prof. Fan Liu](https://cies.hhu.edu.cn/2024/0521/c21613a280137/page.htm), and gained industry experience as an Algorithm Intern at Spring Airlines. Yijun hails from Shanghai (上海); outside of research, he is a badminton player and enjoys Souls-like games (such as Naraka: Bladepoint).
+郭子扬，东南大学（SEU）软件工程专业硕士研究生一年级，导师为[金嘉晖](https://jujuhoo.github.io/)。本科毕业于河海大学（2025年），曾于百度担任大模型算法实习生。 
 
 # 🔍Research Topics
-- **World Model**
-- **LLM Planning**
+- ** ChatBot ** 
+- ** Agent-Memory **         
+- ** Healthcare Intelligence **
+- ** AI-Assisted Software Engineering ** 
+
 
 # 🔥 News
-- *2025.08*: &nbsp; "Chain-of-Talkers (CoTalk): Fast Human Annotation of Dense Image Captions," was accepted to EMNLP 2025 🎉🎉
-- *2025.03*: &nbsp; "The Intelligent Audit Platform," successfully completed its pilot phase and was officially deployed at the finance department of Spring Airlines. 🎉🎉
-- *2024.08*: &nbsp; As team leader, our project "E Mark: Intelligent Marking Platform" won the Second Prize in the National Computer Design Competition and the Third Prize in the National Service Outsourcing Innovation and Entrepreneurship Competition. 🎉🎉
-- *2024.06*: &nbsp; Having been awarded the "Ten Outstanding and One Hundred Excellent Students" title (Top 100 university-wide). 🎓🎓
-- *2023.09*: &nbsp; "State index for interpreting the state-dependent behavior of granular soil: A review," was accepted to Archives of Computational Methods in Engineering (IF 9.7)! 🎉🎉
-
-# 📖 Educations
-- *2025.09 - now*, M.S. College of Computer Science and Technology, East China Normal University, supervised by Prof. Kai Zhang.
-- *2021.08 - 2025.07*, B.S. at College of Artificial Intelligence and Automation, Hohai University, supervised by Prof. Fan Liu.
-
-# 💻 Internships
-- *2024.10 - 2025.03*, Algorithm Intern at Spring Airlines, under the supervision of Dr. Zhenya Lin.
+- 2026/5-[主讲东南大学黑客松workshop2](https://www.xiaohongshu.com/discovery/item/69fd7b3b00000000350335fe?source=webshare&xhsshare=pc_web&xsec_token=AB1lJekvt7r-6ERoXNSriwyhGzwulPVNI-xqenuwiI8ME=&xsec_source=pc_share):为大家讲解如何和ai同频共振，以便更好地AI Coding、AI Working
+- 2026/4-[东南大学校花校草](https://mp.weixin.qq.com/s/VC-TzLqVNIvsVyMB-r2biw):愚人节看个开心～
+- 2026/3-[成为真正的AI Native Coder](https://mp.weixin.qq.com/s/xLgonEJ9cCH0LaLpw76_3g):基于个人开发经历，沉淀AI Codind方法论，阅读2万转发3千
+- 2025/12-[优化大模型应用的三个阶段：prompt->sft->rl](https://www.zhihu.com/question/498271491/answer/1978925310432010693):如何判断是自己prompt写的不够好 OR 基座模型的能力不够，才让大模型应用达不到预期效果？这个问题直接决定了后续的技术路径——是继续调prompt、引入RAG还是投入大量成本去做SFT、RL。
+- 2025/10-[关于AI Agent设计理念的深度思考](https://mp.weixin.qq.com/s/3DGLUjQ_KP5heVbf3PTTZA):基于ChatBot、DeepResearch相关业务实习经历，总结Agent设计理念，阅读2万转发3千，获字节DeerFlow团队致敬认可
+- 2025/9-[25年大模型应用方向：Text2SQL](https://zhuanlan.zhihu.com/p/1915001536171476928):随着模型底座能力与企业数据治理的持续进化，Text2SQL 不再只是问数据库，而是成为驱动业务流程的核心入口，让用户在一次对话中完成检索、决策与执行的全链路操作。我们有望从移动互联网迈向对话互联网
 
 
 # 📝 Selected Publications 
@@ -84,23 +81,13 @@ Yijun Shen (沈逸骏) is a first-year master's student in Computer Science at [
 
 ---
 
-# 👥 Co-authors
-
-Prof. [Kai Zhang](https://faculty.ecnu.edu.cn/_s16/zk2/main.psp), Prof. [Fan Liu](https://cies.hhu.edu.cn/2024/0521/c21613a280137/page.htm), [Delong Chen](https://chendelong.world/), [Liang Yao](https://1e12leon.top/), [Xingyu Wang](https://multimodality.group/author/%E7%8E%8B%E5%85%B4%E5%AE%87/)
-
 # 🏆 Competitions
-
-- 2025, bronze medal, Kaggle —— CIBMTR - Equity in post-HCT Survival Predictions
-- 2024, Second Prize, Final of National Computer Design Competition \| 中国大学生计算机设计大赛全国总决赛二等奖
-- 2024, Third Prize, Final of National Service Outsourcing Innovation and Entrepreneurship Competition \| 中国大学生服务外包创新创业大赛总决赛三等奖
-- 2023, Second Prize, Final of Global Campus Artificial Intelligence Algorithm Elite Competition \| 全球校园人工智能算法精英大赛全国总决赛二等奖
-- 2023, Honorable Winner, The Mathematical Contest in Modeling (MCM) \| 美国大学生数学建模大赛 Meritorious Winner
+- 2024, 中国大学生计算机设计大赛全国二等奖
+- 2024, 中国大学生服务外包创新创业大赛三等奖
 
 # 🎖 Honors and Awards
-
-- 2025, Outstanding Undergraduate Thesis, Hohai University \| 河海大学优秀本科毕业论文
-- 2024, "Ten Outstanding and One Hundred Excellent Students" Award, Hohai University  \| 河海大学海韵风华十杰百佳”优秀学生
-- 2024, Outstanding Communist Youth League Cadre, Hohai University  \| 河海大学优秀共青团干部
-- 2022, 2023, Merit Student, Hohai University  \| 河海大学优秀学生标兵
-- 2023, 2025, Outstanding Student Leader, Hohai University  \| 河海大学优秀学生干部
-- 2021-2025, Outstanding Undergraduate Student Scholarship, Hohai University  \| 河海大学优秀学生奖学金
+- 2024.11, 河海大学十佳班长（24年全校唯十）
+- 2024.10, 河海大学严恺奖学金（24年全学院唯一）
+- 2024.05, 江苏省先进班集体
+- 2023.10, 本科生国家奖学金 
+- 2021-2025, 河海大学优秀学生奖学金
