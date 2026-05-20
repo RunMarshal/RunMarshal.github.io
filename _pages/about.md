@@ -39,13 +39,18 @@ redirect_from:
 <div class='paper-box'>
 <div class='paper-box-image'>
 <div>
-
-[DeepMemo](https://github.com/YeyezhizzZ/deepmemo)：本地优先的 Markdown 知识库创作与问答工作台，旨在构建可编辑、可检索、可追溯的个人知识系统，适合长期沉淀学习记录、工程经验和科研进度![GitHub stars](https://img.shields.io/github/stars/YeyezhizzZ/deepmemo?style=flat-square)![GitHub forks](https://img.shields.io/github/forks/YeyezhizzZ/deepmemo?style=flat-square)
-
+<div class="badge">GitHub</div>
 <img src='../images/deepmemo-editor.png' alt="DeepMemo screenshot" width="100%">
 </div>
 </div>
 <div class='paper-box-text' markdown="1">
+
+[DeepMemo](https://github.com/YeyezhizzZ/deepmemo)
+
+![GitHub stars](https://img.shields.io/github/stars/YeyezhizzZ/deepmemo?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/YeyezhizzZ/deepmemo?style=flat-square)
+
+- 本地优先的 Markdown 知识库创作与问答工作台，旨在构建可编辑、可检索、可追溯的个人知识系统，适合长期沉淀学习记录、工程经验和科研进度。
 
 </div>
 </div>
@@ -53,16 +58,18 @@ redirect_from:
 <div class='paper-box'>
 <div class='paper-box-image'>
 <div>
-
-[Awesome-AI-Memory](https://github.com/IAAR-Shanghai/Awesome-AI-Memory)：面向Agent Memory的持续更新知识库，系统整理记忆系统设计、研究论文、开源框架、基准与实践，当前已积累了 400+ 论文和 100+ 开源项目。个人认为memory是agent时代的数字基建，十分欢迎同行交流～![GitHub stars](https://img.shields.io/github/stars/IAAR-Shanghai/Awesome-AI-Memory?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/IAAR-Shanghai/Awesome-AI-Memory?style=flat-square)
+<div class="badge">GitHub</div>
 <img src='../images/awesome-ai-memory.png' alt="Awesome-AI-Memory cover" width="100%">
 </div>
 </div>
 <div class='paper-box-text' markdown="1">
 
+[Awesome-AI-Memory](https://github.com/IAAR-Shanghai/Awesome-AI-Memory)
 
+![GitHub stars](https://img.shields.io/github/stars/IAAR-Shanghai/Awesome-AI-Memory?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/IAAR-Shanghai/Awesome-AI-Memory?style=flat-square)
 
+- 面向Agent Memory的持续更新知识库，系统整理记忆系统设计、研究论文、开源框架、基准与实践，当前已积累了 400+ 论文和 100+ 开源项目。个人认为memory是agent时代的数字基建，十分欢迎同行交流～
 
 </div>
 </div>

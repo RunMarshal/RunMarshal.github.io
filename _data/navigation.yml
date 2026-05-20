@@ -5,12 +5,6 @@ main:
     
   - title: "News"
     url: "/#-news"
-    
-  - title: "Educations"
-    url: "/#-educations"
-
-  - title: "Internships"
-    url: "/#-internships"
 
   - title: "Competitions"
     url: "/#-competitions"
